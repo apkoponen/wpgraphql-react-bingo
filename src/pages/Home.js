@@ -31,7 +31,6 @@ export default function Home() {
   const history = useHistory();
   const [addPlayer, { error, loading, data }] = useMutation(ADD_PLAYER);
   useEffect(() => {
-    console.log(data);
     if (data && data.addPlayerToBingo && data.addPlayerToBingo.gameTitle) {
       history.push(`/bingo/${data.addPlayerToBingo.gameTitle}`);
     }
