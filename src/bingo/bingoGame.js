@@ -1,7 +1,7 @@
 import { createPool } from "../utils/pool";
 
 export function generateGrid(words) {
-  const gridSize = Math.ceil(Math.sqrt(words.length));
+  const gridSize = Math.floor(Math.sqrt(words.length));
   const pickRandomWord = createPool(words);
 
   const grid = [];
