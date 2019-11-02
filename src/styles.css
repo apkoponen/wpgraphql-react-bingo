@@ -1,0 +1,107 @@
+.Home {
+
+}
+
+
+.Home__error {
+    background: red;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 15px;
+}
+.Home__form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Bingo {
+    padding: 15px;
+}
+
+.Bingo__winner  {
+    font-weight: bold;
+    font-size: 40px;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.Bingo__winner-text {
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        color: red;
+    }
+    50% {
+        transform: rotate(160deg);
+        color: deeppink;
+    }
+    100% {
+        transform: rotate(360deg);
+        color: green;
+    }
+}
+
+.Bingo__wrapper {
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+}
+
+.Bingo__grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    border-left: 1px solid #333;
+    border-top: 1px solid #333;
+}
+
+.Bingo__row {
+    flex: 1 1 0;
+    display: flex;
+}
+
+.Bingo__cell {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    hyphens: auto;
+}
+
+.Bingo__cell--selected {
+    background-color: #00a699;
+    color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+    .Bingo__cell {
+        font-size: 10px;
+        font-weight: normal;
+    }
+}
