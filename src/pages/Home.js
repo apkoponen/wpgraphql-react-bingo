@@ -38,7 +38,7 @@ export default function Home() {
   }, [data, history]);
 
   return (
-    <div>
+    <div className="Home">
       <h2>Welcome to Bingo!</h2>
       <div>
         {loading && <p>Loading...</p>}
@@ -69,15 +69,15 @@ export default function Home() {
             }}
           >
             <label>
-              Name:{" "}
+              <span>Name: </span>
               <input name="playerTitle" defaultValue={state.playerTitle} />
             </label>
             <label>
-              Team name:{" "}
+              <span>Team name: </span>
               <input name="teamTitle" defaultValue={state.teamTitle} />
             </label>
             <label>
-              Game name:{" "}
+              <span>Game name: </span>
               <input name="gameTitle" defaultValue={state.gameTitle} />
             </label>
             <button>Join!</button>

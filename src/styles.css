@@ -1,17 +1,53 @@
 .Home {
-
+    padding: 15px;
+    max-width: 400px;
+    margin: 0 auto;
 }
-
 
 .Home__error {
     background: red;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #fff;
     padding: 15px;
+    border-radius: 5px;
 }
-.Home__form label{
-    display: block;
+.Home__form label {
+    display: flex;
     margin-bottom: 10px;
+    align-items: center;
+}
+
+.Home__form label span {
+    flex: 0 1 auto;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.Home__form label input {
+    flex: 1 1 auto;
+    border: 1px solid #174152;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.Home__form button {
+    background: #174152;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 32px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.35s ease;
+}
+
+.Home__form button:hover {
+    background: #21637A;
 }
 
 .Bingo {
